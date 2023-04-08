@@ -21,7 +21,6 @@ public class Main extends JFrame {
             setTitle("main");
             setSize(windowWidth,windowHeight);
 
-
             //cardPanel
             cardPanel = new JPanel();
             card = new CardLayout();
@@ -33,15 +32,17 @@ public class Main extends JFrame {
            //make login label
             loginLabel = new JLabel("login panel");
             //make display label
-            dispalyLabel= new JLabel("display pabel");
+            dispalyLabel= new JLabel("display panel");
+
+            loginButton =new JButton("login");
 
             //add labels to appropriate panel
             loginPanel.add(loginLabel);
             loginPanel.add(loginButton);
             displayPanel.add(dispalyLabel);
             //add panels to cardpanel
-            cardPanel.add(loginLabel,1);
-            cardPanel.add(displayPanel,2);
+            cardPanel.add(loginPanel,"loginPanel");
+            cardPanel.add(displayPanel,"displayPanel");
 
             loginButton.addActionListener(new ActionListener()
             {
@@ -49,7 +50,7 @@ public class Main extends JFrame {
                 {
 
                     // used first c1 CardLayout
-                    card.first(cardPanel);
+                    card.show(cardPanel,"displayPanel");
 
                     // value of currentcard is 1
                     currentCard = 2;
