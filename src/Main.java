@@ -13,8 +13,10 @@ public class Main extends JFrame {
         private JPanel cardPanel;
         private JPanel loginPanel;
         private JPanel displayPanel;
+        private JPanel bookingPanel;
+        private JPanel searchPanel;
         private JLabel loginLabel;
-        private JLabel dispalyLabel;
+        private JLabel displayLabel;
         private JButton loginButton;
         public Main(){
             //JFrame window = new JFrame();
@@ -32,14 +34,14 @@ public class Main extends JFrame {
            //make login label
             loginLabel = new JLabel("login panel");
             //make display label
-            dispalyLabel= new JLabel("display panel");
+            displayLabel= new JLabel("display panel");
 
             loginButton =new JButton("login");
 
             //add labels to appropriate panel
             loginPanel.add(loginLabel);
             loginPanel.add(loginButton);
-            displayPanel.add(dispalyLabel);
+            displayPanel.add(displayLabel);
             //add panels to cardpanel
             cardPanel.add(loginPanel,"loginPanel");
             cardPanel.add(displayPanel,"displayPanel");
@@ -52,7 +54,7 @@ public class Main extends JFrame {
                     // used first c1 CardLayout
                     card.show(cardPanel,"displayPanel");
 
-                    // value of currentcard is 1
+                    // value of currentcard is 2
                     currentCard = 2;
                 }
             });
