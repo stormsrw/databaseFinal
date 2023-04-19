@@ -45,7 +45,8 @@ public class loginPage extends JFrame {
             String Password = password.getText();
 
             try {
-                String dbURL = "jdbc:sqlite:C:/Users/Ryan Storms/Desktop/programming2/database/workplace.db";
+                //String dbURL = "jdbc:sqlite:C:/Users/Ryan Storms/Desktop/programming2/database/workplace.db";
+                String dbURL = "jdbc:sqlite:C:/Users/ryns8/OneDrive/Desktop/code/database/databaseFinal/workplace.db";
                 Connection conn = null;
                 conn = DriverManager.getConnection(dbURL);
                 String access = "SELECT * FROM Users WHERE Username = ? AND Password = ?";
@@ -74,7 +75,7 @@ public class loginPage extends JFrame {
     }
     public static void main(String[] args) {
          try{
-             String dbURL = "jdbc:sqlite:C:/Users/Ryan Storms/Desktop/programming2/database/workplace.db";
+             String dbURL = "jdbc:sqlite:C:/Users/ryns8/OneDrive/Desktop/code/database/databaseFinal/workplace.db";
              Connection conn = null;
              conn = DriverManager.getConnection(dbURL);
              Statement st = conn.createStatement();
